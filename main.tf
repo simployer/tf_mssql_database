@@ -8,6 +8,9 @@ resource "azurerm_mssql_database" "this" {
     retention_days = 7
   }
   long_term_retention_policy {
-    weekly_retention = "P25W"
+    weekly_retention  = "P25W"
+    monthly_retention = "PT0S"
+    yearly_retention  = "PT0S"
+    week_of_year      = 1
   }
 }
