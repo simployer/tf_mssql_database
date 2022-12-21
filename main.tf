@@ -15,7 +15,7 @@ resource "azurerm_mssql_database" "this" {
   }
   lifecycle {
     ignore_changes = [
-      long_term_retention_policy.week_of_year,
+      long_term_retention_policy[0].week_of_year,
     ]
   }
 }
